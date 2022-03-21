@@ -9,18 +9,19 @@ def Map1():
         board = np.full( (boardSz, boardSz), Entities.Empty)
         
         # Define path
-        board[1, 0] = Entities.Entrance
+        board[0, 1] = Entities.Entrance
         
-        for col in range(1, 8):
-            board[1, col] = Entities.Path
-            board[3, col] = Entities.Path
-            board[5, col] = Entities.Path
-            board[7, col] = Entities.Path
+        for col in range(1, 9):
+            board[col, 1] = Entities.Path
+            board[col, 3] = Entities.Path
+            board[col, 5] = Entities.Path
+            board[col, 7] = Entities.Path
         
-        board[2,8] = Entities.Path
-        board[4,1] = Entities.Path
-        board[6,8] = Entities.Path
-        board[8,0] = Entities.Path
-        board[9,0] = Entities.Exit
+        board[8,2] = Entities.Path
+        board[1,4] = Entities.Path
+        board[8,6] = Entities.Path
+        board[0,7] = Entities.Path
+        board[0,8] = Entities.Path
+        board[0,9] = Entities.Exit
         
         return board
