@@ -1,7 +1,8 @@
 import numpy as np
 import random
+from Maps import Maps
 
-from Entities import TileTypes as TileTypes
+from Tiles.Entity import Entities
 
 # Define the game class
 class BadlandsTDGame:
@@ -12,14 +13,7 @@ class BadlandsTDGame:
     
     # Constructor
     def __init__(self):
-        # Define board size
-        boardSz = 10
-        
-        # Define empty board
-        self.board = np.full( (boardSz, boardSz), TileTypes.Empty)
-        
-        # Define path
-        
+        board = Maps.InitMap(1)
             
         
     # Propagation
